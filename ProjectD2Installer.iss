@@ -16,14 +16,14 @@ GameRegEng=SOFTWARE\Blizzard Entertainment\Diablo II
 
 [Setup]
 AppId={{822B3055-5F16-4934-A1FC-378AB0181A66}
-AppName=Project Diablo 2
+AppName=Project Diablo 2 Beta
 AppVersion=1.0
-AppVerName=Project Diablo 2
+AppVerName=Project Diablo 2 Beta
 AppPublisher=projectdiablo2.com
 VersionInfoVersion=1.0.0.0
 VersionInfoTextVersion=1.0.0.0
-VersionInfoProductName=Project Diablo 2
-VersionInfoDescription=Project Diablo 2
+VersionInfoProductName=Project Diablo 2 Beta
+VersionInfoDescription=Project Diablo 2 Beta
 AppPublisherURL=https://www.projectdiablo2.com/
 AppSupportURL=https://www.projectdiablo2.com/
 AppUpdatesURL=https://www.projectdiablo2.com/
@@ -46,49 +46,49 @@ SetupIconFile=Resources\PD2_Icon.ico
 AppendDefaultDirName=no
 ShowLanguageDialog=no
 RestartIfNeededByRun=no
-UninstallFilesDir={app}\ProjectD2
+UninstallFilesDir={app}\ProjectD2Beta
 
 [Languages]
 Name: "english"; MessagesFile: "compiler:Default.isl"
 
 [InstallDelete]
-Type: files; Name: "{app}\ProjectD2\UI.ini"
-Type: files; Name: "{app}\ProjectD2\ddraw.ini"
-Type: files; Name: "{app}\ProjectD2\D2HD.ini"
-Type: files; Name: "{app}\ProjectD2\ProjectDiablo.cfg"
-Type: files; Name: "{app}\ProjectD2\bncache.dat"
-Type: files; Name: "{app}\ProjectD2\BnetLog.txt"
-Type: files; Name: "{app}\ProjectD2\settings.db"
+Type: files; Name: "{app}\ProjectD2Beta\UI.ini"
+Type: files; Name: "{app}\ProjectD2Beta\ddraw.ini"
+Type: files; Name: "{app}\ProjectD2Beta\D2HD.ini"
+Type: files; Name: "{app}\ProjectD2Beta\ProjectDiablo.cfg"
+Type: files; Name: "{app}\ProjectD2Beta\bncache.dat"
+Type: files; Name: "{app}\ProjectD2Beta\BnetLog.txt"
+Type: files; Name: "{app}\ProjectD2Beta\settings.db"
 
 [Files]
-Source: Files\*; DestDir: "{app}\ProjectD2"; Flags: ignoreversion
-Source: Files\MpqFixer\*; DestDir: "{app}\ProjectD2\MpqFixer"; Flags: ignoreversion
+Source: Files\*; DestDir: "{app}\ProjectD2Beta"; Flags: ignoreversion
+Source: Files\MpqFixer\*; DestDir: "{app}\ProjectD2Beta\MpqFixer"; Flags: ignoreversion
 
 Source: Resources\VC_redist.x86.exe; Flags: dontcopy
 Source: Resources\VC_redist.x64.exe; Flags: dontcopy
 
 [Icons]
-Name: "{commondesktop}\Project Diablo 2"; Filename: "{app}\ProjectD2\PD2Launcher.exe"; WorkingDir: "{app}\ProjectD2"; Check: not RunsOnWine
-Name: "{group}\Project Diablo 2"; Filename: "{app}\ProjectD2\PD2Launcher.exe"; WorkingDir: "{app}\ProjectD2"; Check: RunsOnWine
-Name: "{app}\ProjectD2\Uninstall Project Diablo 2"; Filename: "{uninstallexe}"; WorkingDir: "{app}\ProjectD2"
+Name: "{commondesktop}\Project Diablo 2 Beta"; Filename: "{app}\ProjectD2Beta\PD2Launcher.exe"; WorkingDir: "{app}\ProjectD2Beta"; Check: not RunsOnWine
+Name: "{group}\Project Diablo 2 Beta"; Filename: "{app}\ProjectD2Beta\PD2Launcher.exe"; WorkingDir: "{app}\ProjectD2Beta"; Check: RunsOnWine
+Name: "{app}\ProjectD2Beta\Uninstall Project Diablo 2 Beta"; Filename: "{uninstallexe}"; WorkingDir: "{app}\ProjectD2Beta"
 
 [Run]
 Filename: "{tmp}\VC_redist.x86.exe"; Parameters: "/install /passive /norestart"; Flags: runascurrentuser; Check: FileExists(ExpandConstant('{tmp}\VC_redist.x86.exe')) and ChangeStatusLabel('Visual C++ Redistributable 2019 (x86)')
 
 Filename: "{tmp}\VC_redist.x64.exe"; Parameters: "/install /passive /norestart"; Flags: runascurrentuser; Check: FileExists(ExpandConstant('{tmp}\VC_redist.x64.exe')) and ChangeStatusLabel('Visual C++ Redistributable 2019 (x64)')
 
-Filename: "{app}\ProjectD2\MpqFixer\FIX_MPQS_RUN_AS_ADMIN.bat"; WorkingDir: "{app}\ProjectD2\MpqFixer"; Flags: runascurrentuser; Check: ChangeStatusLabel('MPQFixer')
+Filename: "{app}\ProjectD2Beta\MpqFixer\FIX_MPQS_RUN_AS_ADMIN.bat"; WorkingDir: "{app}\ProjectD2Beta\MpqFixer"; Flags: runascurrentuser; Check: ChangeStatusLabel('MPQFixer')
 
-Filename: "{app}\ProjectD2\PD2Launcher.exe"; WorkingDir: "{app}\ProjectD2"; Description: "{cm:LaunchProgram,Project Diablo 2}"; Flags: nowait postinstall runascurrentuser skipifsilent; Check: not OpenRegisterAccountUrl
+Filename: "{app}\ProjectD2Beta\PD2Launcher.exe"; WorkingDir: "{app}\ProjectD2Beta"; Description: "{cm:LaunchProgram,Project Diablo 2 Beta}"; Flags: nowait postinstall runascurrentuser skipifsilent; Check: not OpenRegisterAccountUrl
 
 [UninstallDelete]
-Type: filesandordirs; Name: "{app}\ProjectD2"
+Type: filesandordirs; Name: "{app}\ProjectD2Beta"
 
 
 [Registry]
-Root: HKLM; Subkey: Software\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers; ValueType: String; ValueName: {app}\ProjectD2\PD2Launcher.exe; ValueData: "RUNASADMIN"; Check: not IsWin64
+Root: HKLM; Subkey: Software\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers; ValueType: String; ValueName: {app}\ProjectD2Beta\PD2Launcher.exe; ValueData: "RUNASADMIN"; Check: not IsWin64
 
-Root: HKLM64; Subkey: Software\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers; ValueType: String; ValueName: {app}\ProjectD2\PD2Launcher.exe; ValueData: "RUNASADMIN"; Check: IsWin64
+Root: HKLM64; Subkey: Software\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers; ValueType: String; ValueName: {app}\ProjectD2Beta\PD2Launcher.exe; ValueData: "RUNASADMIN"; Check: IsWin64
 
 Root: HKCU; Subkey: Software\Wine\AppDefaults\game.exe\DllOverrides; ValueType: string; ValueName: "ddraw"; ValueData: "native, builtin"; Check: RunsOnWine
 
